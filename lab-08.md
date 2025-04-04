@@ -1,7 +1,7 @@
 Lab 08 - University of Edinburgh Art Collection
 ================
-Insert your name here
-Insert date here
+Noah Booker
+4/4/25
 
 ## Load Packages and Data
 
@@ -11,6 +11,17 @@ First, let’s load the necessary packages:
 library(tidyverse) 
 library(skimr)
 ```
+
+Checking whether bots are allowed to access pages on this domain.
+
+``` r
+library(robotstxt)
+paths_allowed("https://collections.ed.ac.uk/art)")
+```
+
+    ##  collections.ed.ac.uk
+
+    ## [1] TRUE
 
 Now, load the dataset. If your data isn’t ready yet, you can leave
 `eval = FALSE` for now and update it when needed.
@@ -32,10 +43,10 @@ uoe_art <- uoe_art %>%
   select(title, artist, year, ___)  # Fill in the missing variable!
 ```
 
-    ## Error in parse(text = input): <text>:4:32: unexpected input
+    ## Error in parse(text = input): <text>:4:31: unexpected input
     ## 3:   mutate(year = str_remove(date, "\\)") %>% as.numeric()) %>%
-    ## 4:   select(title, artist, year, __
-    ##                                   ^
+    ## 4:   select(title, artist, year, _
+    ##                                  ^
 
 Make sure to replace `___` with the appropriate column name.
 

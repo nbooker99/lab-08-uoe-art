@@ -1,7 +1,7 @@
 ---
 title: "Lab 08 - University of Edinburgh Art Collection"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Noah Booker"
+date: "4/4/25"
 output: github_document
 ---
 
@@ -12,6 +12,13 @@ First, let's load the necessary packages:
 ```{r load-packages, message = FALSE}
 library(tidyverse) 
 library(skimr)
+```
+
+Checking whether bots are allowed to access pages on this domain.
+
+```{r}
+library(robotstxt)
+paths_allowed("https://collections.ed.ac.uk/art)")
 ```
 
 Now, load the dataset. If your data isn't ready yet, you can leave `eval = FALSE` for now and update it when needed.  
